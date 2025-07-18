@@ -12,6 +12,7 @@ public enum ErrorCode {
     METHOD_NOT_ALLOWED(1001, "허용되지 않은 메서드입니다"),
     ENTITY_NOT_FOUND(1002, "요청한 리소스를 찾을 수 없습니다"),
     INTERNAL_SERVER_ERROR(1003, "서버 내부 오류가 발생했습니다"),
+    DUPLICATE_RESOURCE(1004, "이미 존재하는 리소스입니다"),
     
     // 인증/인가 에러 (2000번대)
     UNAUTHORIZED(2000, "인증이 필요합니다"),
