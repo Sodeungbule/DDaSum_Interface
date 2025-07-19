@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDaSum - 환영합니다!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .email-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .greeting {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .username {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .message {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .welcome-icon {
+            font-size: 60px;
+            margin: 20px 0;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .feature-icon {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            margin-top: 15px;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 480px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .features {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- 헤더 -->
+        <div class="header">
+            <div class="logo">🏡 DDaSum</div>
+            <div class="subtitle">빈집 예약/관리 플랫폼</div>
+        </div>
+        
+        <!-- 본문 -->
+        <div class="content">
+            <div class="welcome-icon">🎉</div>
+            
+            <div class="greeting">
+                환영합니다, <span class="username" th:text="${username}">사용자</span>님! 👋
+            </div>
+            
+            <div class="message">
+                DDaSum에 가입해주셔서 정말 감사합니다!<br>
+                이제 빈집 예약과 관리를 더욱 편리하게 이용하실 수 있습니다.
+            </div>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <span class="feature-icon">🏠</span>
+                    <span>빈집 등록 및 관리</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📅</span>
+                    <span>편리한 예약 시스템</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">⭐</span>
+                    <span>리뷰 및 평가</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💳</span>
+                    <span>안전한 결제 시스템</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔒</span>
+                    <span>보안된 사용자 인증</span>
+                </div>
+            </div>
+            
+            <a href="#" class="cta-button">
+                🚀 서비스 시작하기
+            </a>
+            
+            <div style="margin-top: 20px; font-size: 14px; color: #666;">
+                궁금한 점이 있으시면 언제든 고객센터에 문의해주세요!
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- 푸터 -->
+        <div class="footer">
+            <div>감사합니다! 🙏</div>
+            <div style="margin-top: 5px;">DDaSum 팀 드림</div>
+            
+            <div class="footer-links">
+                <a href="#">홈페이지</a>
+                <a href="#">고객센터</a>
+                <a href="#">개인정보처리방침</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
