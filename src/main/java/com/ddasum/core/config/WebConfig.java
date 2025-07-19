@@ -18,6 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(requestLoggingInterceptor)
                 .addPathPatterns("/**")
+                .addPathPatterns("http://localhost:3000/")   // 프론트엔드 프록시 포트 설정
                 .excludePathPatterns("/error", "/favicon.ico");
     }
 
